@@ -1,6 +1,107 @@
-/* 缩小首页介绍区，让文章列表更靠近介绍 */
+/* 阅读区域：适合中文长文的行宽。 */
+:root {
+    --main-width: 720px;
+}
+
+/* 首页介绍按内容撑开，减少介绍与文章列表之间的留白。 */
 .first-entry.home-info {
     min-height: auto;
     justify-content: flex-start;
+    align-items: flex-start;
     margin: 20px 0 24px;
+}
+
+.home-info .entry-header h1 {
+    font-size: 30px;
+    line-height: 1.35;
+}
+
+.home-info .entry-content {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.home-info .entry-content p {
+    margin: 12px 0;
+}
+
+/* 文章列表：轻量卡片，标题、摘要和日期有清晰层级。 */
+.post-entry {
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+}
+
+.post-entry .entry-header h2 {
+    font-size: 22px;
+    line-height: 1.45;
+}
+
+.post-entry .entry-content {
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 10px 0;
+}
+
+/* 正文缩至 16px，同时保留足够行距。 */
+.post-title,
+.page-header h1 {
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 24px 0;
+    overflow-wrap: break-word;
+}
+
+.post-content p {
+    margin-bottom: 1.2em;
+}
+
+.post-content h1 {
+    font-size: 28px;
+    margin: 32px 0 18px;
+}
+
+.post-content h2 {
+    font-size: 24px;
+    margin: 28px 0 16px;
+}
+
+.post-content h3 {
+    font-size: 20px;
+    margin: 24px 0 12px;
+}
+
+.post-content :is(h1, h2, h3) {
+    line-height: 1.45;
+}
+
+/* 正文缩小后，代码仍保持可读的字号。 */
+.post-content code {
+    font-size: 0.875em;
+}
+
+@media (max-width: 600px) {
+    .first-entry.home-info {
+        margin: 12px 0 20px;
+    }
+
+    .home-info .entry-header h1,
+    .post-title,
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .post-entry {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .post-entry .entry-header h2 {
+        font-size: 20px;
+    }
 }
