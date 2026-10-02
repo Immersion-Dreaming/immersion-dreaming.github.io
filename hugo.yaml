@@ -1,0 +1,77 @@
+baseURL: "https://immersion-dreaming.github.io/"
+title: "darry's blog"
+theme: PaperMod
+
+locale: zh-CN
+defaultContentLanguage: zh
+hasCJKLanguage: true
+timeZone: Asia/Shanghai
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  author: darry
+  description: "记录技术与论文、生活随笔、读书笔记，以及月度与年度复盘。"
+  mainSections:
+    - posts
+
+  defaultTheme: light
+  disableThemeToggle: false
+  DateFormat: "2006-01-02"
+
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  showToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "darry's blog"
+    Content: "记录学习与生活，在写作中整理思考，在回顾中看见变化。"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/Immersion-Dreaming"
+
+  fuseOpts:
+    ignoreLocation: true
+    threshold: 0.3
+    keys:
+      - title
+      - summary
+      - content
+
+menu:
+  main:
+    - name: 首页
+      url: /
+      weight: 10
+    - name: 归档
+      url: /archives/
+      weight: 20
+    - name: 分类
+      url: /categories/
+      weight: 30
+    - name: 标签
+      url: /tags/
+      weight: 40
+    - name: 搜索
+      url: /search/
+      weight: 50
+    - name: 关于
+      url: /about/
+      weight: 60
