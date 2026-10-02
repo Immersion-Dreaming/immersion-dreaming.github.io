@@ -1,0 +1,6 @@
+/* 缩小首页介绍区，让文章列表更靠近介绍 */
+.first-entry.home-info {
+    min-height: auto;
+    justify-content: flex-start;
+    margin: 20px 0 24px;
+}
