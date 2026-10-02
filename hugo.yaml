@@ -25,7 +25,7 @@ outputs:
 params:
   env: production
   author: darry
-  description: "记录技术与论文、生活随笔、读书笔记，以及月度与年度复盘。"
+  description: "从2026年开始，记录技术、论文、生活随笔、读书笔记，以及月度与年度复盘。"
   mainSections:
     - posts
 
@@ -40,7 +40,7 @@ params:
   TocOpen: false
 
   homeInfoParams:
-    Title: "darry's blog"
+    Title: "Welcome to darry's blog"
     Content: "记录学习与生活，在写作中整理思考，在回顾中看见变化。"
 
   socialIcons:
